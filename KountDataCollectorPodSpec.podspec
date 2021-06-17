@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
 
   s.description      = 'This KountDataCollector pod will collect device data and it will post data to Kounts server to know fraud prevention and detection.'
 
-  s.homepage         = 'https://github.com/VamsiKrishna1805/KountDataCollectorPodSpec'
+  s.homepage         = 'https://github.com/VamsiKrishna1805/KountSDKCocoapods'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
 
