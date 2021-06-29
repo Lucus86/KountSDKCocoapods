@@ -97,7 +97,7 @@ typedef NS_ENUM(NSInteger, DeviceFPDataCollectorStatus) {
 + (NSError *)getKDataCollectionError;
 
 
-- (nullable NSDictionary *)collectDeviceFingerPrintData:(nullable void (^)(BOOL success, NSError *_Nullable error))completionBlock;
+- (void)collectDeviceFingerPrintData:(nullable void (^)(BOOL success,NSDictionary *_Nonnull deviceFingerprintDict, NSError *_Nullable error))completionBlock;
 
 + (NSString *)getDeviceFPDataCollectionStatus;
 
