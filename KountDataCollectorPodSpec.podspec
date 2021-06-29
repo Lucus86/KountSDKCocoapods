@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/VamsiKrishna1805/KountSDKCocoapods.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.vendored_frameworks = 'KountDataCollector.xcframework'
+  s.vendored_frameworks = 'xcframeworks/KountDataCollector.xcframework'
   s.platform = :ios
 
   s.ios.deployment_target = '9.3'

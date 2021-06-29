@@ -29,7 +29,27 @@ typedef NS_ENUM(NSInteger, KDataCollectorStatus) {
     KDataCollectorStatusFailedWithError,
     
     // A device data collection failed without error
-    KDataCollectoStatusFailedWithOutError,
+    KDataCollectoStatusFailedWithoutError,
+    
+};
+
+// Device Collection Status
+typedef NS_ENUM(NSInteger, DeviceFPDataCollectorStatus) {
+    
+    // A device data collection not started
+    DeviceFPDataCollectorStatusNotStarted = 0,
+    
+    // A device data collection started
+    DeviceFPDataCollectorStatusStarted,
+    
+    // A device data collection completed successfully
+    DeviceFPDataCollectorStatusCompleted,
+    
+    // A device data collection failed with error
+    DeviceFPDataCollectorStatusFailedWithError,
+    
+    // A device data collection failed without error
+    DeviceFPDataCollectorStatusFailedWithoutError,
     
 };
 
@@ -39,6 +59,7 @@ typedef NS_ENUM(NSInteger, KDataCollectorStatus) {
 
 + (id)sharedInstance;
 + (void)setColorWellButtonType;
++ (nullable NSMutableArray *)getFingerprintDataToTextView;
 - (NSString *)getColorWellButtonType;
 + (NSString *)getAppSessionID;
 - (BOOL)checkIsDeviceJailbroken;
@@ -74,6 +95,12 @@ typedef NS_ENUM(NSInteger, KDataCollectorStatus) {
 
 + (NSString *)getKDataCollectionStatus;
 + (NSError *)getKDataCollectionError;
+
+
+- (nullable NSDictionary *)collectDeviceFingerPrintData:(nullable void (^)(BOOL success, NSError *_Nullable error))completionBlock;
+
++ (NSString *)getDeviceFPDataCollectionStatus;
+
 
 @end
 
